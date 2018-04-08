@@ -19,8 +19,11 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.9",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-sass-glob-importer": "^5.1.1"
+  }
 }

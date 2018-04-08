@@ -9,10 +9,16 @@ var gulp         = require('gulp'),
     imagemin     = require('gulp-imagemin'),
     pngquant     = require('imagemin-pngquant'),
     cache        = require('gulp-cache'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    sassGlob     = require('gulp-sass-glob');
 
 gulp.task('sass', function () {
     return gulp.src('app/sass/**/*.scss') //берем источник
+        .pipe(sassGlob({
+            ignorePaths: [
+                // 'blocks/*.scss'
+            ]
+        }))
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) //преобразуем в css
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) //добавляем префиксы
         .pipe(cssnano())
@@ -22,10 +28,7 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function () {
     return gulp.src([
-        'app/libs/jquery/dist/jquery.min.js',
-        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'app/libs/owlcarousel/js/owl.carousel.min.js',
-        'app/libs/owlcarousel/js/owl.carousel2.thumbs.min.js'
+        'app/libs/jquery/jquery-3.3.1.min.js'
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
