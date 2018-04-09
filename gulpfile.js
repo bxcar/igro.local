@@ -14,11 +14,7 @@ var gulp         = require('gulp'),
 
 gulp.task('sass', function () {
     return gulp.src('app/sass/**/*.scss') //берем источник
-        .pipe(sassGlob({
-            ignorePaths: [
-                // 'blocks/*.scss'
-            ]
-        }))
+        .pipe(sassGlob())
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) //преобразуем в css
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) //добавляем префиксы
         .pipe(cssnano())

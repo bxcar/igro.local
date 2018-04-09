@@ -23,7 +23,5 @@
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.1.0"
   },
-  "dependencies": {
-    "node-sass-glob-importer": "^5.1.1"
-  }
+  "dependencies": {}
 }
