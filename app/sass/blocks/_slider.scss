@@ -1,0 +1,45 @@
+.slider {
+  border-top: 6px dotted #3b90c3;
+  border-bottom: 6px dotted #3b90c3;
+  padding: {
+    top: 40px;
+    bottom: 50px;
+    left: 25px;
+  }
+}
+
+.slider__wrapper {
+  margin: {
+    bottom: 42px;
+  }
+}
+
+.slider__title {
+  @include font(PT Sans, sans-serif, 36px, 1.1em, #000000, bold);
+  text-transform: uppercase;
+  position: relative;
+  padding: {
+    bottom: 34px;
+  }
+  margin: {
+    top: 0;
+    bottom: 18px;
+  }
+
+  &::after {
+    content:"";
+    width: 85px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 7px solid #abd361;
+  }
+}
+
+.slider__description {
+  @include font(PT Sans, sans-serif, 18px, 1.3em, #565656, 300);
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+}

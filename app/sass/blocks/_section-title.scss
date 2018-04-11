@@ -1,0 +1,16 @@
+.section-title {
+  @include font(PT Sans, sans-serif, 30px, 1em, #3b90c3, bold);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin: {
+    top: 12px;
+    bottom: 24px;
+  }
+}
+
+.section-title__img {
+  margin: {
+    right: 18px;
+  }
+}

@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IgroDetki</title>
+    <link rel="stylesheet" href="libs/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -38,49 +40,61 @@
     <div class="img-with-right-slider">
         <img class="img-with-right-slider__img" src="img/actual-news-big.png">
         <div class="slider slider--border">
-            <div class="slider__item">
-                <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
-                <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                    auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
-                    sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                    Morbi</p>
+            <div class="slider__wrapper owl-carousel" id="owl-slider">
+                <div class="slider__item">
+                    <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
+                    <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+                        velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+                        ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                        mauris. Morbi </p>
+                </div>
+                <div class="slider__item">
+                    <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
+                    <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+                        velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+                        sagittis sem nibh id elit.</p>
+                </div>
+                <div class="slider__item">
+                    <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
+                    <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
+                        velit
+                        auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
+                        sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                        Morbi</p>
+                </div>
             </div>
-            <div class="slider__item">
-                <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
-                <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                    auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
-                    sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                    Morbi</p>
-            </div>
-            <div class="slider__item">
-                <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
-                <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-                    auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec
-                    sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                    Morbi</p>
-            </div>
-        </div>
-        <div class="flex">
-            <div class="news-tile">
-                <img class="news-tile__img" src="img/actual-news-little.png">
-                <h3 class="news-tile__title">Название новости</h3>
-                <span class="news-tile__time">18:30</span>
-            </div>
-            <div class="news-tile">
-                <img class="news-tile__img" src="img/actual-news-little.png">
-                <h3 class="news-tile__title">Название новости</h3>
-                <span class="news-tile__time">18:30</span>
-            </div>
-            <div class="news-tile">
-                <img class="news-tile__img" src="img/actual-news-little.png">
-                <h3 class="news-tile__title">Название новости</h3>
-                <span class="news-tile__time">18:30</span>
+            <div id='carousel-custom-dots' class='owl-dots'>
+                <div class='owl-dot'></div>
+                <div class='owl-dot'></div>
+                <div class='owl-dot'></div>
+                <div class='owl-dot'></div>
+                <div class='owl-dot'></div>
+                <div class='owl-dot'></div>
+                <div class='owl-dot'></div>
+                <div class='owl-dot'></div>
             </div>
         </div>
     </div>
-    <div class="dots-line"></div>
+    <div class="flex">
+        <div class="news-tile">
+            <img class="news-tile__img" src="img/actual-news-little.png">
+            <h3 class="news-tile__title">Название новости</h3>
+            <span class="news-tile__time">18:30</span>
+        </div>
+        <div class="news-tile">
+            <img class="news-tile__img" src="img/actual-news-little.png">
+            <h3 class="news-tile__title">Название новости</h3>
+            <span class="news-tile__time">18:30</span>
+        </div>
+        <div class="news-tile">
+            <img class="news-tile__img" src="img/actual-news-little.png">
+            <h3 class="news-tile__title">Название новости</h3>
+            <span class="news-tile__time">18:30</span>
+        </div>
+    </div>
+    <!--<div class="dots-line"></div>
     <h2 class="section-title"><img class="section-title__img" src="img/games-icon.png">Игры</h2>
-    <div class="flex flex--right-big">
+    <div class="flex flex&#45;&#45;right-big">
         <div class="news-tile">
             <img class="news-tile__img" src="img/games-little.png">
             <h3 class="news-tile__title">Название новости</h3>
@@ -91,7 +105,7 @@
             <h3 class="news-tile__title">Название новости</h3>
             <span class="news-tile__time">18:30</span>
         </div>
-        <div class="news-tile news-tile--big">
+        <div class="news-tile news-tile&#45;&#45;big">
             <img class="news-tile__img" src="img/games-big.png">
             <h3 class="news-tile__title">Название новости</h3>
             <span class="news-tile__time">18:30</span>
@@ -117,8 +131,8 @@
     </div>
     <div class="dots-line"></div>
     <h2 class="section-title"><img class="section-title__img" src="img/literature-icon.png">Игры</h2>
-    <div class="flex flex--left-big">
-        <div class="news-tile news-tile--big">
+    <div class="flex flex&#45;&#45;left-big">
+        <div class="news-tile news-tile&#45;&#45;big">
             <img class="news-tile__img" src="img/games-big.png">
             <h3 class="news-tile__title">Название новости</h3>
             <span class="news-tile__time">18:30</span>
@@ -148,7 +162,7 @@
         <img class="banner__img" src="img/children-banner.png">
     </div>
     <h2 class="section-title"><img class="section-title__img" src="img/psychology-icon.png">Психология</h2>
-    <div class="flex flex--right-big">
+    <div class="flex flex&#45;&#45;right-big">
         <div class="news-tile">
             <img class="news-tile__img" src="img/games-little.png">
             <h3 class="news-tile__title">Название новости</h3>
@@ -159,7 +173,7 @@
             <h3 class="news-tile__title">Название новости</h3>
             <span class="news-tile__time">18:30</span>
         </div>
-        <div class="news-tile news-tile--big">
+        <div class="news-tile news-tile&#45;&#45;big">
             <img class="news-tile__img" src="img/games-big.png">
             <h3 class="news-tile__title">Название новости</h3>
             <span class="news-tile__time">18:30</span>
@@ -216,7 +230,8 @@
         </div>
         <div class="footer_copyright">2018 All Right Reserved.</div>
     </div>
-</footer>
-<script src="js/libs.min.js"></script>
+</footer>-->
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
