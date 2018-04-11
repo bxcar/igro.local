@@ -1,0 +1,15 @@
+.search-form {
+  margin: {
+    top: 2px;
+  }
+}
+
+.search-form__submit {
+  background: none;
+  border: none;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

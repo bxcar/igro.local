@@ -1,8 +1,30 @@
-.container {
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext');
 
+body {
+  margin: 0;
+}
+
+.container {
+  width: 1175px;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .nofill-button {
-
+  height: 19px;
+  @include font(PT Sans, sans-serif, 18px, 1em, #4293c5, bold);
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #3b90c3;
+  padding: 20px 25px;
+  border-radius: 50px;
 }
 

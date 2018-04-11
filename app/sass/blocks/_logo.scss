@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__text {
+  @include font(PT Sans, sans-serif, 42px, inherit, #000000, bold);
+  margin: {
+    left: 8px;
+  }
+}
+
+.logo__text-color {
+  color: #3b91c4;
+}
