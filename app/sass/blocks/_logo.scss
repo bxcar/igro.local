@@ -1,6 +1,10 @@
 .logo {
   display: flex;
   align-items: center;
+
+  &--footer {
+    align-items: flex-start;
+  }
 }
 
 .logo__text {
@@ -8,8 +12,15 @@
   margin: {
     left: 8px;
   }
+
+  &--footer {
+    color: #fff;
+  }
 }
 
 .logo__text-color {
   color: #3b91c4;
+  &--footer {
+    color: #fff;
+  }
 }
