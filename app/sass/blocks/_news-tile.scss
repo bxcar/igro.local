@@ -1,0 +1,37 @@
+.news-tile {
+  width: 372px;
+  text-decoration: none;
+}
+
+.news-tile__title {
+  @include font(PT Sans, sans-serif, 26px, 1em, #000000, bold);
+  text-transform: uppercase;
+  position: relative;
+  padding: {
+    bottom: 15px;
+  }
+  margin: 0;
+
+  &::after {
+    content:"";
+    width: 85px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 7px solid #abd361;
+  }
+}
+
+.news-tile__title-wrap {
+  margin: {
+    top: 25px;
+    bottom: 0;
+  }
+}
+
+.news-tile__time {
+  @include font(PT Sans, sans-serif, 18px, 1em, #565656, 300);
+  padding: {
+    bottom: 15px;
+  }
+}

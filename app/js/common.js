@@ -1,7 +1,5 @@
 $(document).ready(function () {
     $("#owl-slider").owlCarousel({
-        // loop: true,
-        // nav: true,
         items: 1,
         singleItem: true,
         dots: true,
