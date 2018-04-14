@@ -100,3 +100,9 @@
 .owl-dot--v2.active {
     background-color: transparent;
 }
+
+@media (max-width: 1175px) {
+    .owl-slider {
+        width: 100%;
+    }
+}

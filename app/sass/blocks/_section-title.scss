@@ -21,6 +21,11 @@
       bottom: 35px;
     }
   }
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .section-title__img {

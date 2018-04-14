@@ -16,6 +16,10 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .nofill-button {
@@ -39,44 +43,6 @@ body {
       font-weight: bold;
     }
   }
-}
-
-
-.flex {
-  display: flex;
-
-  &--img-with-right-slider {
-    justify-content: space-between;
-    margin: {
-      top: 30px;
-      bottom: 30px;
-    }
-  }
-
-  &--right-left-big {
-    width: 773px;
-    height: 681px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-  }
-
-  &--games {
-    margin: {
-      bottom: 30px;
-    }
-  }
-}
-
-.flex-sb {
-  display: flex;
-  justify-content: space-between;
-}
-
-.flex-sb-aic {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .dots-line {

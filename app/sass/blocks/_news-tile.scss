@@ -1,6 +1,19 @@
 .news-tile {
   width: 372px;
   text-decoration: none;
+
+  @media (max-width: $desktop-width) {
+    margin: {
+      bottom: 40px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
 }
 
 .news-tile__title {

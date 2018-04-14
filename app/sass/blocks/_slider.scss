@@ -23,6 +23,14 @@
       bottom: 60px;
     }
   }
+
+  @media (max-width: $desktop-width) {
+    width: 70%;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 80%;
+  }
 }
 
 .slider__wrapper {

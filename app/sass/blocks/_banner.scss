@@ -9,3 +9,9 @@
     }
   }
 }
+
+.banner__img {
+  @media (max-width: $desktop-width) {
+    max-width: 100%;
+  }
+}
