@@ -1,0 +1,33 @@
+.comments {
+  margin: {
+    top: 25px;
+  }
+}
+
+.comments__item {
+  margin: {
+    bottom: 20px;
+  }
+}
+
+.comments__item-top {
+  width: 360px;
+}
+
+.comments__author-name {
+  @include font(PT Sans, sans-serif, 18px, inherit, #505050, bold);
+}
+
+.comments__time {
+  @include font(PT Sans, sans-serif, 18px, inherit, #505050, 400);
+}
+
+.comments_comment {
+  @include font(PT Sans, sans-serif, 18px, inherit, #565656, 400);
+  margin: {
+    left: 55px;
+  }
+  margin: {
+    top: 7px;
+  }
+}

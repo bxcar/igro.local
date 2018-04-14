@@ -56,6 +56,26 @@ body {
     }
   }
 
+  &--comment {
+    display: flex;
+    justify-content: center;
+    width: 222px;
+    color: #fff;
+    font-weight: 400;
+    background-color: #9ccd5c;
+    border-color: #9ccd5c;
+    margin: {
+      left: auto;
+      right: auto;
+      top: 30px;
+      bottom: 22px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   @media (max-width: $desktop-width) {
     &--header {
       margin: {
@@ -97,5 +117,27 @@ body {
 
   @media (max-width: $desktop-width) {
     display: none
+  }
+}
+
+.square {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #3b90c3;
+  margin: {
+    right: 10px;
+  }
+
+  &--green {
+    background-color: #abd361;
+  }
+}
+
+.grey-line {
+  border-bottom: 1px solid #959595;
+
+  &--sidebar {
+    border-width: 2px;
   }
 }

@@ -45,13 +45,13 @@
     </div>
     <div class="flex-sb article">
         <div class="article__main-part">
-            <div class="flex-sb">
+            <div class="flex-sb-aic article__title-wrap">
                 <h1 class="article__title">Название статьи</h1>
-                <div class="article__comments-count"><img class="article__comment-count-img"
-                                                          src="img/comments-icon.png">115 комментариев
+                <div class="article__comments-count">
+                    <img class="article__comment-count-img" src="img/comments-icon.png">115 комментариев
                 </div>
             </div>
-            <div class="flex-sb">
+            <div class="flex-sb-aic">
                 <span class="article__time">18:30<span class="article__author">Автор</span></span>
                 <div class="article__socials">
                     <a target="_blank" href="https://vk.com" class="article__social-icon"><img
@@ -100,91 +100,100 @@
                     velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
             </div>
             <a class="nofill-button nofill-button--comment">Оставить комментарий</a>
-            <span class="article__comments-title">Комментарии 3</span>
+            <span class="article__comments-title"><span class="square"></span>Комментарии 3</span>
             <div class="grey-line"></div>
             <div class="article__comments comments">
                 <div class="comments__item">
-                    <div class="flex-sb">
+                    <div class="flex-sb-aic comments__item-top">
                         <img class="comments__author-icon" src="img/user-icon.png">
                         <span class="comments__author-name">Имя пользователя</span>
                         <span class="comments__time">19.02 в 12:30</span>
                         <img class="comments__bookmark" src="img/bookmark.png">
+                    </div>
+                    <div class="flex-sb-aic">
+                        <p class="comments_comment">Комментарий заказчика на несколько строчек</p>
                     </div>
                 </div>
                 <div class="comments__item">
-                    <div class="flex-sb">
+                    <div class="flex-sb-aic comments__item-top">
                         <img class="comments__author-icon" src="img/user-icon.png">
                         <span class="comments__author-name">Имя пользователя</span>
                         <span class="comments__time">19.02 в 12:30</span>
                         <img class="comments__bookmark" src="img/bookmark.png">
+                    </div>
+                    <div class="flex-sb-aic">
+                        <p class="comments_comment">Комментарий заказчика на несколько строчек</p>
                     </div>
                 </div>
                 <div class="comments__item">
-                    <div class="flex-sb">
+                    <div class="flex-sb-aic comments__item-top">
                         <img class="comments__author-icon" src="img/user-icon.png">
                         <span class="comments__author-name">Имя пользователя</span>
                         <span class="comments__time">19.02 в 12:30</span>
                         <img class="comments__bookmark" src="img/bookmark.png">
                     </div>
+                    <div class="flex-sb-aic">
+                        <p class="comments_comment">Комментарий заказчика на несколько строчек</p>
+                    </div>
                 </div>
             </div>
-            <div class="dots-line"></div>
-            <div class="subscribe-news">
-                <span class="subscribe-news__title">Подпишитесь на наши новости</span>
-                <form class="subscribe-news__form" action="#" method="post">
-                    <div class="flex-sb-aic subscribe-news__form-items-wrap">
-                        <input class="subscribe-news__email" type="email" name="email" placeholder="Ваш email">
-                        <button class="subscribe-news__submit" type="submit"><span class="subscribe-news__submit-text1">Подписаться</span><span>+1258</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-            <div class="dots-line"></div>
         </div>
         <div class="sidebar">
-            <span class="sidebar__last-news-title">Последние</span>
+            <span class="sidebar__last-news-title"><span class="square square--green"></span>Последние</span>
             <div class="flex-sb sidebar__news-item">
                 <div class="sidebar__news-left">
-                    <span class="sidebar__news-title">Название новости или статьи на несколько строк</span>
-                    <span class="sidebar__news-time">18:30</span>
-                </div>
-                <img class="sidebar__news-right" src="img/article-preview.png">
-                <div class="grey-line"></div>
-            </div>
-            <div class="flex-sb sidebar__news-item">
-                <div class="sidebar__news-left">
-                    <span class="sidebar__news-title">Название новости или статьи на несколько строк</span>
-                    <span class="sidebar__news-time">18:30</span>
-                </div>
-                <img class="sidebar__news-right" src="img/article-preview.png">
-                <div class="grey-line"></div>
-            </div>
-            <div class="flex-sb sidebar__news-item">
-                <div class="sidebar__news-left">
-                    <span class="sidebar__news-title">Название новости или статьи на несколько строк</span>
-                    <span class="sidebar__news-time">18:30</span>
-                </div>
-                <img class="sidebar__news-right" src="img/article-preview.png">
-                <div class="grey-line"></div>
-            </div>
-            <div class="flex-sb sidebar__news-item">
-                <div class="sidebar__news-left">
-                    <span class="sidebar__news-title">Название новости или статьи на несколько строк</span>
-                    <span class="sidebar__news-time">18:30</span>
-                </div>
-                <img class="sidebar__news-right" src="img/article-preview.png">
-                <div class="grey-line"></div>
-            </div>
-            <div class="flex-sb sidebar__news-item">
-                <div class="sidebar__news-left">
-                    <span class="sidebar__news-title">Название новости или статьи на несколько строк</span>
+                    <a href="#" class="sidebar__news-title">Название новости или статьи на несколько строк</a>
                     <span class="sidebar__news-time">18:30</span>
                 </div>
                 <img class="sidebar__news-right" src="img/article-preview.png">
             </div>
-            <img class="sidebar__big-img" src="img/article-sidebar-img.png">
+            <div class="grey-line grey-line--sidebar"></div>
+            <div class="flex-sb sidebar__news-item">
+                <div class="sidebar__news-left">
+                    <a href="#" class="sidebar__news-title">Название новости или статьи на несколько строк</a>
+                    <span class="sidebar__news-time">18:30</span>
+                </div>
+                <img class="sidebar__news-right" src="img/article-preview.png">
+            </div>
+            <div class="grey-line grey-line--sidebar"></div>
+            <div class="flex-sb sidebar__news-item">
+                <div class="sidebar__news-left">
+                    <a href="#" class="sidebar__news-title">Название новости или статьи на несколько строк</a>
+                    <span class="sidebar__news-time">18:30</span>
+                </div>
+                <img class="sidebar__news-right" src="img/article-preview.png">
+            </div>
+            <div class="grey-line grey-line--sidebar"></div>
+            <div class="flex-sb sidebar__news-item">
+                <div class="sidebar__news-left">
+                    <a href="#" class="sidebar__news-title">Название новости или статьи на несколько строк</a>
+                    <span class="sidebar__news-time">18:30</span>
+                </div>
+                <img class="sidebar__news-right" src="img/article-preview.png">
+            </div>
+            <div class="grey-line grey-line--sidebar"></div>
+            <div class="flex-sb sidebar__news-item">
+                <div class="sidebar__news-left">
+                    <a href="#" class="sidebar__news-title">Название новости или статьи на несколько строк</a>
+                    <span class="sidebar__news-time">18:30</span>
+                </div>
+                <img class="sidebar__news-right" src="img/article-preview.png">
+            </div>
+            <a href="#"><img class="sidebar__big-img" src="img/article-sidebar-img.png"></a>
         </div>
     </div>
+    <div class="dots-line"></div>
+    <div class="subscribe-news">
+        <span class="subscribe-news__title">Подпишитесь на наши новости</span>
+        <form class="subscribe-news__form" action="#" method="post">
+            <div class="flex-sb-aic subscribe-news__form-items-wrap">
+                <input class="subscribe-news__email" type="email" name="email" placeholder="Ваш email">
+                <button class="subscribe-news__submit" type="submit"><span class="subscribe-news__submit-text1">Подписаться</span><span>+1258</span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="dots-line"></div>
 </main>
 <footer class="footer footer--v2">
     <div class="container">
