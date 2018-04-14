@@ -6,8 +6,14 @@
     top: 20px;
   }
   background: {
-    image: url("../../img/footer-bg.png");
+    image: url("../img/footer-bg.png");
     size: cover;
+  }
+
+  &--about {
+    margin: {
+      top: 45px;
+    }
   }
 }
 

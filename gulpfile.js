@@ -34,9 +34,15 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('css-libs', ['sass'], function () {
-    return gulp.src('app/css/libs.css')
+    /*return gulp.src('app/css/libs.css')
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('app/css'));*/
+    return gulp.src([
+        'app/libs/owlcarousel/css/owl.carousel.min.css'
+    ])
+        .pipe(concat('libs.min.css'))
+        .pipe(cssnano())
         .pipe(gulp.dest('app/css'));
 });
 

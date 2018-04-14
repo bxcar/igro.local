@@ -26,6 +26,19 @@ body {
   border: 1px solid #3b90c3;
   padding: 20px 25px;
   border-radius: 50px;
+
+  &--about-slider {
+    font-size: 24px;
+    border-color: transparent;
+    color: #000;
+    font-weight: 400;
+
+    &.active {
+      border-color: #3b90c3;
+      color: #4293c5;
+      font-weight: bold;
+    }
+  }
 }
 
 
@@ -71,5 +84,12 @@ body {
   margin: {
     left: 8px;
     right: 8px;
+  }
+
+  &--section-title {
+    width: 100%;
+    margin: {
+      left: 40px;
+    }
   }
 }

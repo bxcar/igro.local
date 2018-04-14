@@ -1,10 +1,27 @@
 .slider {
-  border-top: 6px dotted #3b90c3;
-  border-bottom: 6px dotted #3b90c3;
   padding: {
     top: 40px;
     bottom: 50px;
     left: 25px;
+  }
+
+  &--border {
+    border-top: 6px dotted #3b90c3;
+    border-bottom: 6px dotted #3b90c3;
+  }
+
+  &--about {
+    width: 870px;
+    padding: {
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+    margin: {
+      left: auto;
+      right: auto;
+      bottom: 60px;
+    }
   }
 }
 
@@ -41,5 +58,9 @@
   margin: {
     top: 0;
     bottom: 0;
+  }
+
+  &--about {
+    text-align: justify;
   }
 }
