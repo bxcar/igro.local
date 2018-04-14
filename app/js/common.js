@@ -11,7 +11,8 @@ $(document).ready(function () {
         singleItem: true,
         dots: true,
         dotsContainer: '#carousel-custom-dots',
-        animateOut: 'fadeOut'
+        animateOut: 'fadeOut',
+        autoHeight:true
     });
 
     $('.owl-dot').click(function () {

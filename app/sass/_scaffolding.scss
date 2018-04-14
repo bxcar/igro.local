@@ -63,6 +63,12 @@ body {
         right: 33px;
       }
     }
+
+    &--about-slider {
+      height: auto;
+      text-align: center;
+      line-height: 1.1em;
+    }
   }
 
   @media (max-width: $mobile-width) {
@@ -87,5 +93,9 @@ body {
     margin: {
       left: 40px;
     }
+  }
+
+  @media (max-width: $desktop-width) {
+    display: none
   }
 }
