@@ -67,6 +67,13 @@
 .flex-sb {
   display: flex;
   justify-content: space-between;
+
+  &--footer {
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 .flex-sb-aic {

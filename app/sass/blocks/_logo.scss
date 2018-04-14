@@ -4,6 +4,10 @@
 
   &--footer {
     align-items: flex-start;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 20px;
+    }
   }
 }
 

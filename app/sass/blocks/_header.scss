@@ -30,6 +30,15 @@
     max-width: 100%;
     overflow: hidden;
   }
+
+  @media (max-width: $desktop-width) {
+    height: 168px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 390px;
+  }
+
 }
 
 .header__menu {
@@ -38,6 +47,26 @@
   margin: {
     top: 5px;
     bottom: 0;
+  }
+
+  &--mobile {
+    display: none;
+  }
+
+  @media (max-width: $desktop-width) {
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: $mobile-width) {
+        flex-direction: column;
+      }
+
+    }
   }
 }
 
@@ -52,6 +81,21 @@
       left: 0;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    margin: {
+      left: auto;
+      right: auto;
+      bottom: 7px;
+    }
+
+    &:first-child {
+      margin: {
+        left: auto;
+      }
+    }
+  }
+
 }
 
 .header__menu-link {

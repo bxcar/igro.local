@@ -101,7 +101,7 @@
     background-color: transparent;
 }
 
-@media (max-width: 1175px) {
+@media (max-width: 1215px) {
     .owl-slider {
         width: 100%;
     }
