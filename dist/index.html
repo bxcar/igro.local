@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IgroDetki</title>
-    <link rel="stylesheet" href="libs/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -17,20 +17,27 @@
             <img class="logo__img" src="img/header-logo.png">
             <span class="logo__text">Igro<span class="logo__text-color">Detki</span></span>
         </div>
-        <ul class="header__menu">
+        <ul class="header__menu header__menu--desktop">
             <li class="header__menu-item"><a class="header__menu-link" href="#">Новости</a></li>
             <li class="header__menu-item"><a class="header__menu-link" href="#">Игры</a></li>
             <li class="header__menu-item"><a class="header__menu-link" href="#">Литература</a></li>
             <li class="header__menu-item"><a class="header__menu-link" href="#">Психология</a></li>
             <li class="header__menu-item"><a class="header__menu-link" href="#">Сервисы</a></li>
         </ul>
-        <a class="nofill-button" href="#">Написать нам</a>
+        <a class="nofill-button nofill-button--header" href="#">Написать нам</a>
         <form class="search-form" action="#" method="post">
             <button type="submit" class="search-form__submit">
                 <img class="search-form__submit-img" src="img/search-button.png">
             </button>
         </form>
     </div>
+    <ul class="header__menu header__menu--mobile">
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Новости</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Игры</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Литература</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Психология</a></li>
+        <li class="header__menu-item"><a class="header__menu-link" href="#">Сервисы</a></li>
+    </ul>
 </header>
 <main class="container">
     <div class="banner">
@@ -40,7 +47,7 @@
     <div class="img-with-right-slider">
         <img class="img-with-right-slider__img" src="img/actual-news-big.png">
         <div class="slider slider--border">
-            <div class="slider__wrapper owl-carousel" id="owl-slider">
+            <div class="slider__wrapper owl-carousel owl-slider" id="owl-slider">
                 <div class="slider__item">
                     <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
                     <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
@@ -102,7 +109,7 @@
     <div class="dots-line"></div>
     <h2 class="section-title section-title--games"><img class="section-title__img" src="img/games-icon.png">Игры</h2>
     <div class="flex-sb flex--games">
-        <div class="flex flex--right-big">
+        <div class="flex flex--right-left-big">
             <a href="#" class="news-tile">
                 <img class="news-tile__img" src="img/games-little.png">
                 <div class="news-tile__title-wrap flex-sb-aic">
@@ -144,112 +151,140 @@
     <div class="subscribe-news">
         <span class="subscribe-news__title">Подпишитесь на наши новости</span>
         <form class="subscribe-news__form" action="#" method="post">
-            <input class="subscribe-news__email" type="email" name="email" placeholder="Ваш email">
-            <button class="subscribe-news__submit" type="submit">Подписаться +1258</button>
+            <div class="flex-sb-aic subscribe-news__form-items-wrap">
+                <input class="subscribe-news__email" type="email" name="email" placeholder="Ваш email">
+                <button class="subscribe-news__submit" type="submit"><span class="subscribe-news__submit-text1">Подписаться</span><span>+1258</span></button>
+            </div>
         </form>
     </div>
     <div class="dots-line"></div>
-    <!--<h2 class="section-title"><img class="section-title__img" src="img/literature-icon.png">Игры</h2>
-    <div class="flex flex&#45;&#45;left-big">
-        <div class="news-tile news-tile&#45;&#45;big">
+    <h2 class="section-title section-title--games"><img class="section-title__img" src="img/literature-icon.png">Литература</h2>
+    <div class="flex-sb flex--games">
+        <a href="#" class="news-tile news-tile--big">
             <img class="news-tile__img" src="img/games-big.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
-        </div>
-        <div class="news-tile">
-            <img class="news-tile__img" src="img/games-little.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
-        </div>
-        <div class="news-tile">
-            <img class="news-tile__img" src="img/games-little.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
-        </div>
-        <div class="news-tile">
-            <img class="news-tile__img" src="img/games-little.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
-        </div>
-        <div class="news-tile">
-            <img class="news-tile__img" src="img/games-little.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
+            <div class="news-tile__title-wrap flex-sb-aic">
+                <h3 class="news-tile__title">Название новости</h3>
+                <span class="news-tile__time">18:30</span>
+            </div>
+        </a>
+        <div class="flex flex--right-left-big">
+            <a href="#" class="news-tile">
+                <img class="news-tile__img" src="img/games-little.png">
+                <div class="news-tile__title-wrap flex-sb-aic">
+                    <h3 class="news-tile__title">Название новости</h3>
+                    <span class="news-tile__time">18:30</span>
+                </div>
+            </a>
+            <a href="#" class="news-tile">
+                <img class="news-tile__img" src="img/games-little.png">
+                <div class="news-tile__title-wrap flex-sb-aic">
+                    <h3 class="news-tile__title">Название новости</h3>
+                    <span class="news-tile__time">18:30</span>
+                </div>
+            </a>
+            <a href="#" class="news-tile">
+                <img class="news-tile__img" src="img/games-little.png">
+                <div class="news-tile__title-wrap flex-sb-aic">
+                    <h3 class="news-tile__title">Название новости</h3>
+                    <span class="news-tile__time">18:30</span>
+                </div>
+            </a>
+            <a href="#" class="news-tile">
+                <img class="news-tile__img" src="img/games-little.png">
+                <div class="news-tile__title-wrap flex-sb-aic">
+                    <h3 class="news-tile__title">Название новости</h3>
+                    <span class="news-tile__time">18:30</span>
+                </div>
+            </a>
         </div>
     </div>
-    <div class="banner">
+   <div class="banner banner--second">
         <img class="banner__img" src="img/children-banner.png">
     </div>
-    <h2 class="section-title"><img class="section-title__img" src="img/psychology-icon.png">Психология</h2>
-    <div class="flex flex&#45;&#45;right-big">
-        <div class="news-tile">
-            <img class="news-tile__img" src="img/games-little.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
+    <h2 class="section-title section-title--games"><img class="section-title__img" src="img/psychology-icon.png">Психология</h2>
+    <div class="flex-sb flex--games">
+        <div class="flex flex--right-left-big">
+            <a href="#" class="news-tile">
+                <img class="news-tile__img" src="img/games-little.png">
+                <div class="news-tile__title-wrap flex-sb-aic">
+                    <h3 class="news-tile__title">Название новости</h3>
+                    <span class="news-tile__time">18:30</span>
+                </div>
+            </a>
+            <a href="#" class="news-tile">
+                <img class="news-tile__img" src="img/games-little.png">
+                <div class="news-tile__title-wrap flex-sb-aic">
+                    <h3 class="news-tile__title">Название новости</h3>
+                    <span class="news-tile__time">18:30</span>
+                </div>
+            </a>
+            <a href="#" class="news-tile">
+                <img class="news-tile__img" src="img/games-little.png">
+                <div class="news-tile__title-wrap flex-sb-aic">
+                    <h3 class="news-tile__title">Название новости</h3>
+                    <span class="news-tile__time">18:30</span>
+                </div>
+            </a>
+            <a href="#" class="news-tile">
+                <img class="news-tile__img" src="img/games-little.png">
+                <div class="news-tile__title-wrap flex-sb-aic">
+                    <h3 class="news-tile__title">Название новости</h3>
+                    <span class="news-tile__time">18:30</span>
+                </div>
+            </a>
         </div>
-        <div class="news-tile">
-            <img class="news-tile__img" src="img/games-little.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
-        </div>
-        <div class="news-tile news-tile&#45;&#45;big">
+        <a href="#" class="news-tile news-tile--big">
             <img class="news-tile__img" src="img/games-big.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
-        </div>
-        <div class="news-tile">
-            <img class="news-tile__img" src="img/games-little.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
-        </div>
-        <div class="news-tile">
-            <img class="news-tile__img" src="img/games-little.png">
-            <h3 class="news-tile__title">Название новости</h3>
-            <span class="news-tile__time">18:30</span>
-        </div>
+            <div class="news-tile__title-wrap flex-sb-aic">
+                <h3 class="news-tile__title">Название новости</h3>
+                <span class="news-tile__time">18:30</span>
+            </div>
+        </a>
     </div>
     <div class="dots-line"></div>
     <div class="subscribe-news">
         <span class="subscribe-news__title">Подпишитесь на наши новости</span>
         <form class="subscribe-news__form" action="#" method="post">
-            <input class="subscribe-news__email" type="email" name="email" placeholder="Ваш email">
-            <button class="subscribe-news__submit" type="submit">Подписаться +1258</button>
+            <div class="flex-sb-aic subscribe-news__form-items-wrap">
+                <input class="subscribe-news__email" type="email" name="email" placeholder="Ваш email">
+                <button class="subscribe-news__submit" type="submit"><span class="subscribe-news__submit-text1">Подписаться</span><span>+1258</span></button>
+            </div>
         </form>
     </div>
     <div class="dots-line"></div>
 </main>
 <footer class="footer">
     <div class="container">
-        <div class="flex">
-            <div class="logo">
+        <div class="flex-sb flex-sb--footer">
+            <div class="logo logo--footer">
                 <img class="logo__img" src="img/footer-logo.png">
-                <span class="logo__text">Igro<span class="logo__text-color">Detki</span></span>
+                <span class="logo__text logo__text--footer">Igro<span class="logo__text-color logo__text-color--footer">Detki</span></span>
             </div>
-            <ul class="footer__menu-1">
-                <li class="footer__menu-item"><a href="#">Новости</a></li>
-                <li class="footer__menu-item"><a href="#">Рубрики</a></li>
-                <li class="footer__menu-item"><a href="#">В тренде</a></li>
+            <ul class="footer__menu footer__menu--1">
+                <li class="footer__menu-item"><a class="footer__menu-link" href="#">Новости</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link" href="#">Рубрики</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link" href="#">В тренде</a></li>
             </ul>
-            <ul class="footer__menu-2">
-                <li class="footer__menu-item"><a href="#">Искусство</a></li>
-                <li class="footer__menu-item"><a href="#">Сотрудничество</a></li>
-                <li class="footer__menu-item"><a href="#">О нас</a></li>
+            <ul class="footer__menu footer__menu--2">
+                <li class="footer__menu-item"><a class="footer__menu-link" href="#">Искусство</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link" href="#">Сотрудничество</a></li>
+                <li class="footer__menu-item"><a class="footer__menu-link" href="#">О нас</a></li>
             </ul>
-            <div class="flex">
-                <ul class="footer__menu-3">
-                    <li class="footer__menu-item"><a href="#">Предложить новость</a></li>
+            <div class="flex footer__menu3-wrap">
+                <ul class="footer__menu footer__menu--3">
+                    <li class="footer__menu-item"><a class="footer__menu-link footer__menu-link--menu3" href="#">Предложить новость</a></li>
                 </ul>
                 <div class="footer__socials">
-                    <a href="#" class="footer__social-icon"><img src="img/vk-icon.png"></a>
-                    <a href="#" class="footer__social-icon"><img src="img/fb-icon.png"></a>
-                    <a href="#" class="footer__social-icon"><img src="img/ok-icon.png"></a>
-                    <a href="#" class="footer__social-icon"><img src="img/inst-icon.png"></a>
+                    <a target="_blank" href="https://vk.com" class="footer__social-icon"><img src="img/vk-icon.png"></a>
+                    <a target="_blank" href="https://facebook.com" class="footer__social-icon"><img src="img/fb-icon.png"></a>
+                    <a target="_blank" href="https://ok.ru" class="footer__social-icon"><img src="img/ok-icon.png"></a>
+                    <a target="_blank" href="https://instagram.com" class="footer__social-icon"><img src="img/inst-icon.png"></a>
                 </div>
             </div>
         </div>
         <div class="footer_copyright">2018 All Right Reserved.</div>
     </div>
-</footer>-->
+</footer>
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>
 </body>

@@ -12,14 +12,33 @@
 
 .comments__item-top {
   width: 360px;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+  }
 }
 
 .comments__author-name {
   @include font(PT Sans, sans-serif, 18px, inherit, #505050, bold);
+  @media (max-width: $mobile-width) {
+    margin: {
+      top: 10px;
+    }
+  }
 }
 
 .comments__time {
   @include font(PT Sans, sans-serif, 18px, inherit, #505050, 400);
+
+  @media (max-width: $mobile-width) {
+    margin: {
+      top: 10px;
+    }
+  }
 }
 
 .comments_comment {
@@ -29,5 +48,10 @@
   }
   margin: {
     top: 7px;
+  }
+  @media (max-width: $mobile-width) {
+    margin: {
+      left: 30px;
+    }
   }
 }

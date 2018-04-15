@@ -3,6 +3,10 @@
   margin: {
     top: 40px;
   }
+
+  @media (max-width: $mobile-width) {
+    max-width: 90%;
+  }
 }
 
 .sidebar__last-news-title {
@@ -13,12 +17,20 @@
   margin: {
     bottom: 25px;
   }
+  @media (max-width: $mobile-width) {
+    justify-content: center;
+  }
 }
 
 .sidebar__news-item {
   margin: {
     bottom: 25px;
     top: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -27,6 +39,12 @@
   flex-direction: column;
   justify-content: space-between;
   width: 160px;
+
+  @media (max-width: $mobile-width) {
+    margin: {
+      bottom: 20px;
+    }
+  }
 }
 
 .sidebar__news-title {
@@ -35,6 +53,11 @@
     top: -4px;
   }
   text-decoration: none;
+  @media (max-width: $mobile-width) {
+    margin: {
+      bottom: 10px;
+    }
+  }
 }
 
 .sidebar__news-time{
@@ -44,5 +67,8 @@
 .sidebar__big-img {
   margin: {
     top: 60px;
+  }
+  @media (max-width: $mobile-width) {
+    max-width: 100%;
   }
 }
