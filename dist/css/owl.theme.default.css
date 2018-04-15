@@ -1,0 +1,118 @@
+/**
+ * Owl Carousel v2.3.3
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent
+}
+
+.owl-theme .owl-nav {
+    margin-top: 10px
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: #869791;
+    color: #FFF;
+    text-decoration: none
+}
+
+.owl-theme .owl-nav .disabled {
+    opacity: .5;
+    cursor: default
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 10px
+}
+
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #869791
+}
+
+.owl-slider {
+    width: 426px;
+}
+
+.owl-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.owl-dots--about {
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+
+.owl-dot {
+    width: 18px;
+    height: 18px;
+    background-color: #dbdbdb;
+    border-radius: 50%;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+.owl-dot:hover {
+    cursor: pointer;
+}
+
+.owl-dot.active {
+    background-color: #3b90c3;
+}
+
+.owl-dot--v2 {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.owl-dot--v2.active {
+    background-color: transparent;
+}
+
+@media (max-width: 1215px) {
+    .owl-slider {
+        width: 100%;
+    }
+
+    .owl-dots--about {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+    -ms-touch-action: auto;
+    touch-action: auto;
+}
