@@ -18,7 +18,8 @@ gulp.task('sass', function () {
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) //преобразуем в css
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) //добавляем префиксы
         .pipe(cssnano())
-        .pipe(gulp.dest('app/css')); //выгружаем в папку css
+        .pipe(gulp.dest('app/css')) //выгружаем в папку css
+        .pipe(gulp.dest('dist/css')); //выгружаем в папку css
         // .pipe(browserSync.reload({stream: true}))
 });
 

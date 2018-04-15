@@ -120,11 +120,17 @@ add_action( 'widgets_init', 'igrodetki_widgets_init' );
  * Enqueue scripts and styles.
  */
 function igrodetki_scripts() {
-	wp_enqueue_style( 'igrodetki-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'libs.min.css', get_template_directory_uri() . '/dist/css/libs.min.css');
+	wp_enqueue_style( 'owl.theme.default.css', get_template_directory_uri() . '/dist/css/owl.theme.default.css');
+	wp_enqueue_style( 'main.css', get_template_directory_uri() . '/dist/css/main.css');
 
-	wp_enqueue_script( 'igrodetki-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script( 'libs.min.js', get_template_directory_uri() . '/dist/js/libs.min.js', array(), '', true);
+    wp_enqueue_script( 'common.js', get_template_directory_uri() . '/dist/js/common.js', array(), '', true);
 
-	wp_enqueue_script( 'igrodetki-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+//	wp_enqueue_style( 'igrodetki-style', get_stylesheet_uri() );
+//	wp_enqueue_script( 'igrodetki-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+//	wp_enqueue_script( 'igrodetki-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -157,5 +163,31 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page(array(
+        'page_title' => 'Общие настройки сайта',
+        'menu_title' => 'Общие настройки',
+        'menu_slug' => 'theme-general-settings',
+        'capability' => 'manage_options',
+        'redirect' => true
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' => 'Header',
+        'menu_title' => 'Header',
+        'menu_slug' => 'header',
+        'parent_slug' => 'theme-general-settings',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title' => 'Footer',
+        'menu_title' => 'Footer',
+        'menu_slug' => 'footer',
+        'parent_slug' => 'theme-general-settings',
+    ));
 }
 

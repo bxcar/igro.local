@@ -12,7 +12,7 @@
   }
 
   &::before {
-    content:url('../../img/header-top-decoration.png');
+    content:url('/wp-content/themes/igrodetki/dist/img/header-top-decoration.png');
     position: absolute;
     left: 0;
     top: -5px;
@@ -22,7 +22,7 @@
   }
 
   &::after {
-    content:url('../../img/header-bottom-decoration.png');
+    content:url('/wp-content/themes/igrodetki/dist/img/header-bottom-decoration.png');
     position: absolute;
     left: 0;
     bottom: 0;
