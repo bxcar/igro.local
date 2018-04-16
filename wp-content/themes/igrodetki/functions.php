@@ -160,3 +160,47 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
+/**
+ * Функция возвращает окончание для множественного числа слова на основании числа и массива окончаний
+ * @param  $number int Число на основе которого нужно сформировать окончание
+ * @param  $ending_arr  array Массив слов с правильными окончаниями для чисел (1, 2, 5),
+ *         например array('комментарий', 'комментария', 'комментариев')
+ * @return string
+ */
+function get_num_ending($number, $ending_arr)
+{
+    $number = $number % 100;
+    if ($number >= 11 && $number <= 19) {
+        $ending = $ending_arr[2];
+    } else {
+        $i = $number % 10;
+        switch ($i) {
+            case (1):
+                $ending = $ending_arr[0];
+                break;
+            case (2):
+            case (3):
+            case (4):
+                $ending = $ending_arr[1];
+                break;
+            default:
+                $ending = $ending_arr[2];
+        }
+    }
+    return $ending;
+}
+
+function comments_number_ru()
+{
+    global $id;
+    $number = get_comments_number($id);
+
+    if ($number == 0) {
+        $output = __('0 комментариев', 'igrodetki');
+    } else  {
+        $output = '' . $number . ' ' . get_num_ending($number, array(__('комментарий', 'igrodetki'), __('комментария', 'igrodetki'), __('комментариев', 'igrodetki')));
+    }
+    echo $output;
+}
+
+add_filter('comments_number', 'comments_number_ru');

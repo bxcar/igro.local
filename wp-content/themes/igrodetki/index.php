@@ -42,7 +42,28 @@ get_header();
             </div>
         </div>
         <div class="flex flex--img-with-right-slider">
-            <a href="#" class="news-tile">
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => '3'
+            );
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) {
+                while ($query->have_posts()) {
+                    $query->the_post(); ?>
+                    <a href="<?php the_permalink(); ?>" class="news-tile">
+                        <img class="news-tile__img" src="<?php the_field('thumbnail_medium'); ?>">
+                        <div class="news-tile__title-wrap flex-sb-aic">
+                            <h3 class="news-tile__title"><?php the_title(); ?></h3>
+                            <span class="news-tile__time"><?php the_time('G:i'); ?></span>
+                        </div>
+                    </a>
+                <?php }
+            }
+            wp_reset_postdata();
+            ?>
+            <!--<a href="#" class="news-tile">
                 <img class="news-tile__img" src="img/actual-news-little.png">
                 <div class="news-tile__title-wrap flex-sb-aic">
                     <h3 class="news-tile__title">Название новости</h3>
@@ -62,7 +83,7 @@ get_header();
                     <h3 class="news-tile__title">Название новости</h3>
                     <span class="news-tile__time">18:30</span>
                 </div>
-            </a>
+            </a>-->
         </div>
         <div class="dots-line"></div>
         <h2 class="section-title section-title--games"><img class="section-title__img" src="img/games-icon.png">Игры

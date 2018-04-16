@@ -9,6 +9,10 @@
   }
 }
 
+.grey-line--sidebar:nth-last-child(2) {
+  display: none;
+}
+
 .sidebar__last-news-title {
   display: flex;
   align-items: center;
