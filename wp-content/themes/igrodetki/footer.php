@@ -14,35 +14,43 @@
     <div class="container">
         <div class="flex-sb flex-sb--footer">
             <div class="logo logo--footer">
-                <img class="logo__img" src="img/footer-logo.png">
-                <span class="logo__text logo__text--footer">Igro<span class="logo__text-color logo__text-color--footer">Detki</span></span>
+                <img class="logo__img" src="<?php the_field('footer_logo', 'option'); ?>">
+                <span class="logo__text logo__text--footer"><?php the_field('footer_title', 'option'); ?></span>
             </div>
-            <ul class="footer__menu footer__menu--1">
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">Новости</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">Рубрики</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">В тренде</a></li>
-            </ul>
-            <ul class="footer__menu footer__menu--2">
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">Искусство</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">Сотрудничество</a></li>
-                <li class="footer__menu-item"><a class="footer__menu-link" href="#">О нас</a></li>
-            </ul>
+            <?php
+            echo str_replace(array('menu-item ', '<a'), array('footer__menu-item ', '<a class="footer__menu-link"'), wp_nav_menu(array(
+                    'echo' => false,
+                    'theme_location' => 'menu-1-footer',
+                    'items_wrap' => '<ul class="footer__menu footer__menu--1">%3$s</ul>',
+                    'container' => 'false'
+                ))
+            );
+            ?>
+            <?php
+            echo str_replace(array('menu-item ', '<a'), array('footer__menu-item ', '<a class="footer__menu-link"'), wp_nav_menu(array(
+                    'echo' => false,
+                    'theme_location' => 'menu-2-footer',
+                    'items_wrap' => '<ul class="footer__menu footer__menu--">%3$s</ul>',
+                    'container' => 'false'
+                ))
+            );
+            ?>
             <div class="flex footer__menu3-wrap">
                 <ul class="footer__menu footer__menu--3">
                     <li class="footer__menu-item"><a class="footer__menu-link footer__menu-link--menu3" href="#">Предложить
                             новость</a></li>
                 </ul>
                 <div class="footer__socials">
-                    <a target="_blank" href="https://vk.com" class="footer__social-icon"><img src="img/vk-icon.png"></a>
-                    <a target="_blank" href="https://facebook.com" class="footer__social-icon"><img
-                                src="img/fb-icon.png"></a>
-                    <a target="_blank" href="https://ok.ru" class="footer__social-icon"><img src="img/ok-icon.png"></a>
-                    <a target="_blank" href="https://instagram.com" class="footer__social-icon"><img
-                                src="img/inst-icon.png"></a>
+                    <a target="_blank" href="<?php the_field('vk_link', 'option'); ?>" class="footer__social-icon"><img src="<?= get_template_directory_uri(); ?>/dist/img/vk-icon.png"></a>
+                    <a target="_blank" href="<?php the_field('fb_link', 'option'); ?>" class="footer__social-icon"><img
+                                src="<?= get_template_directory_uri(); ?>/dist/img/fb-icon.png"></a>
+                    <a target="_blank" href="<?php the_field('ok_link', 'option'); ?>" class="footer__social-icon"><img src="<?= get_template_directory_uri(); ?>/dist/img/ok-icon.png"></a>
+                    <a target="_blank" href="<?php the_field('inst_link', 'option'); ?>" class="footer__social-icon"><img
+                                src="<?= get_template_directory_uri(); ?>/dist/img/inst-icon.png"></a>
                 </div>
             </div>
         </div>
-        <div class="footer_copyright">2018 All Right Reserved.</div>
+        <div class="footer_copyright"><?php the_field('footer_copyright', 'option'); ?></div>
     </div>
 </footer>
 <?php wp_footer(); ?>

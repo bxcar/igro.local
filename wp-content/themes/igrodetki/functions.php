@@ -45,6 +45,8 @@ if ( ! function_exists( 'igrodetki_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'igrodetki' ),
+			'menu-1-footer' => esc_html__( 'Footer-1', 'igrodetki' ),
+			'menu-2-footer' => esc_html__( 'Footer-2', 'igrodetki' ),
 		) );
 
 		/*

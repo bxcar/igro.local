@@ -15,51 +15,29 @@
 get_header();
 ?>
     <main class="container">
-        <div class="banner">
-            <img class="banner__img" src="img/bike-banner.png">
-        </div>
-        <h2 class="section-title"><img class="section-title__img" src="img/actual-news-icon.png">Актуальные новости</h2>
+        <a target="<?= get_field('banner_1_link')['target']; ?>" href="<?= get_field('banner_1_link')['url']; ?>" class="banner">
+            <img class="banner__img" src="<?php the_field('banner_1'); ?>">
+        </a>
+        <h2 class="section-title"><img class="section-title__img" src="<?= get_template_directory_uri(); ?>/dist/img/actual-news-icon.png"><?php the_field('section_title_1'); ?></h2>
         <div class="img-with-right-slider">
-            <img class="img-with-right-slider__img" src="img/actual-news-big.png">
+            <img class="img-with-right-slider__img" src="<?php the_field('left_image_in_slider_block'); ?>">
             <div class="slider slider--border">
                 <div class="slider__wrapper owl-carousel owl-slider" id="owl-slider">
-                    <div class="slider__item">
-                        <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
-                        <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                            vel
-                            velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
-                            ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
-                            amet
-                            mauris. Morbi </p>
-                    </div>
-                    <div class="slider__item">
-                        <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
-                        <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                            vel
-                            velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat
-                            ipsum, nec
-                            sagittis sem nibh id elit.</p>
-                    </div>
-                    <div class="slider__item">
-                        <h3 class="slider__title">«Моя прекрасная выписка из роддома»: Монологи мам</h3>
-                        <p class="slider__description">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh
-                            vel
-                            velit
-                            auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
-                            nec
-                            sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-                            Morbi</p>
-                    </div>
+                    <?php if(get_field('slider')) {
+                        foreach (get_field('slider') as $item) { ?>
+                            <div class="slider__item">
+                                <h3 class="slider__title"><?= $item['title'] ?></h3>
+                                <p class="slider__description"><?= $item['description'] ?></p>
+                            </div>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
                 <div id='carousel-custom-dots' class='owl-dots'>
-                    <div class='owl-dot'></div>
-                    <div class='owl-dot'></div>
-                    <div class='owl-dot'></div>
-                    <div class='owl-dot'></div>
-                    <div class='owl-dot'></div>
-                    <div class='owl-dot'></div>
-                    <div class='owl-dot'></div>
-                    <div class='owl-dot'></div>
+                    <?php if(get_field('slider')) {
+                        foreach (get_field('slider') as $item) { ?>
+                            <div class='owl-dot'></div>
+                        <?php } ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -181,9 +159,9 @@ get_header();
                 </a>
             </div>
         </div>
-        <div class="banner banner--second">
-            <img class="banner__img" src="img/children-banner.png">
-        </div>
+        <a target="<?= get_field('banner_2_link')['target']; ?>" href="<?= get_field('banner_2_link')['url']; ?>" class="banner banner--second">
+            <img class="banner__img" src="<?php the_field('banner_2'); ?>">
+        </a>
         <h2 class="section-title section-title--games"><img class="section-title__img" src="img/psychology-icon.png">Психология
         </h2>
         <div class="flex-sb flex--games">

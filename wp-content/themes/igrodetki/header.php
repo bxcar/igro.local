@@ -23,29 +23,34 @@
 <body>
 <header class="header">
     <div class="container container--header">
-        <div class="logo">
-            <img class="logo__img" src="img/header-logo.png">
-            <span class="logo__text">Igro<span class="logo__text-color">Detki</span></span>
-        </div>
-        <ul class="header__menu header__menu--desktop">
-            <li class="header__menu-item"><a class="header__menu-link" href="#">Новости</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#">Игры</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#">Литература</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#">Психология</a></li>
-            <li class="header__menu-item"><a class="header__menu-link" href="#">Сервисы</a></li>
-        </ul>
-        <a class="nofill-button nofill-button--header" href="#">Написать нам</a>
+        <a href="<?= home_url(); ?>" class="logo">
+            <img class="logo__img" src="<?php the_field('header_logo', 'option'); ?>">
+            <span class="logo__text"><?php the_field('header_title_1_part', 'option'); ?><span
+                        class="logo__text-color"><?php the_field('header_title_2_part', 'option'); ?></span></span>
+        </a>
+        <?php
+        echo str_replace(array('menu-item ', '<a'), array('header__menu-item ', '<a class="header__menu-link"'), wp_nav_menu(array(
+                'echo' => false,
+                'theme_location' => 'menu-1',
+                'items_wrap' => '<ul class="header__menu header__menu--desktop">%3$s</ul>',
+                'container' => 'false'
+            ))
+        );
+        ?>
+        <a class="nofill-button nofill-button--header" href="#"><?php the_field('header_button_text', 'option'); ?></a>
         <form class="search-form" action="#" method="post">
             <button type="submit" class="search-form__submit">
-                <img class="search-form__submit-img" src="img/search-button.png">
+                <img class="search-form__submit-img" src="<?= get_template_directory_uri(); ?>/dist/img/search-button.png">
             </button>
         </form>
     </div>
-    <ul class="header__menu header__menu--mobile">
-        <li class="header__menu-item"><a class="header__menu-link" href="#">Новости</a></li>
-        <li class="header__menu-item"><a class="header__menu-link" href="#">Игры</a></li>
-        <li class="header__menu-item"><a class="header__menu-link" href="#">Литература</a></li>
-        <li class="header__menu-item"><a class="header__menu-link" href="#">Психология</a></li>
-        <li class="header__menu-item"><a class="header__menu-link" href="#">Сервисы</a></li>
-    </ul>
+    <?php
+    echo str_replace(array('menu-item ', '<a'), array('header__menu-item ', '<a class="header__menu-link"'), wp_nav_menu(array(
+            'echo' => false,
+            'theme_location' => 'menu-1',
+            'items_wrap' => '<ul class="header__menu header__menu--mobile">%3$s</ul>',
+            'container' => 'false'
+        ))
+    );
+    ?>
 </header>
