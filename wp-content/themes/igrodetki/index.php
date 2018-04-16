@@ -214,7 +214,7 @@ get_header();
                 </div>
             </form>
         </div>
-        <div class="dots-line"></div>
+        <div class="dots-line dots-line--main-page-prefooter"></div>
     </main>
 <?php
 get_footer();

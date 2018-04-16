@@ -39,6 +39,17 @@
   }
 }
 
+.slider__item {
+  &--about p {
+    @include font(PT Sans, sans-serif, 18px, 1.3em, #565656, 300);
+    margin: {
+      top: 0;
+      bottom: 0;
+    }
+    text-align: justify;
+  }
+}
+
 .slider__title {
   @include font(PT Sans, sans-serif, 36px, 1.1em, #000000, bold);
   text-transform: uppercase;
@@ -52,7 +63,7 @@
   }
 
   &::after {
-    content:"";
+    content: "";
     width: 85px;
     position: absolute;
     bottom: 0;
@@ -66,9 +77,5 @@
   margin: {
     top: 0;
     bottom: 0;
-  }
-
-  &--about {
-    text-align: justify;
   }
 }
