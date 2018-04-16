@@ -147,3 +147,9 @@ body {
     border-width: 2px;
   }
 }
+
+
+//custom styles for wp comments
+.comment-respond .logged-in-as {
+  display: none;
+}

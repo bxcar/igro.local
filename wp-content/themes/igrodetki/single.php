@@ -37,7 +37,7 @@ while ( have_posts() ) : the_post();
                 <div class="article__content">
                     <?php the_content(); ?>
                 </div>
-                <a class="nofill-button nofill-button--comment">Оставить комментарий</a>
+                <!--<a class="nofill-button nofill-button--comment">Оставить комментарий</a>
                 <span class="article__comments-title"><span class="square"></span>Комментарии 3</span>
                 <div class="grey-line"></div>
                 <div class="article__comments comments">
@@ -74,7 +74,8 @@ while ( have_posts() ) : the_post();
                             <p class="comments_comment">Комментарий заказчика на несколько строчек</p>
                         </div>
                     </div>
-                </div>
+                </div>-->
+                <?php comments_template('/comments.php', true); ?>
             </div>
             <?php get_sidebar(); ?>
         </div>

@@ -204,3 +204,101 @@ function comments_number_ru()
 }
 
 add_filter('comments_number', 'comments_number_ru');
+
+
+function mytheme_comment($comment, $args, $depth)
+{
+    $GLOBALS['comment'] = $comment;
+    if ($comment->comment_parent) {
+        switch ($comment->comment_type) :
+            case '' :
+                ?>
+                <!--<li <?php /*comment_class('comment answer'); */?> id="li-comment-<?php /*comment_ID() */?>">
+                    <div class="comment-wrap" id="comment-<?php /*comment_ID(); */?>">
+                        <div class="user-img">
+                            <?php /*echo get_avatar($comment->comment_author_email, $args['avatar_size']); */?>
+                        </div>
+
+                        <?php /*comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) */?>
+
+                        <?php /*printf(__('<cite class="fn name">%s</cite>'), get_comment_author_link()) */?>
+
+                        <div class="date"><?php /*printf(__('%1$s'), get_comment_date('j F Y'), '') */?></div>
+
+                        <?php /*comment_text() */?>
+                        <?php /*//edit_comment_link(__('Редактировать'), ' ');
+                        */?>
+
+                        <?php /*if ($comment->comment_approved == '0') : */?>
+                            <div
+                                class="comment-awaiting-verification"><?php /*_e('Your comment is awaiting moderation.') */?></div>
+                            <br/>
+                        <?php /*endif; */?>
+                    </div>
+                </li>-->
+                <?php
+                break;
+            case 'pingback'  :
+            case 'trackback' :
+                ?>
+                <li class="post pingback">
+                <?php comment_author_link(); ?>
+                <?php edit_comment_link(__('Редактировать'), ' '); ?>
+                <?php
+                break;
+        endswitch;
+    }
+
+    else {
+        switch ($comment->comment_type) :
+            case '' :
+                ?>
+                <div class="comments__item">
+                    <div class="flex-sb-aic comments__item-top">
+                        <img class="comments__author-icon" src="<?= get_template_directory_uri(); ?>/dist/img/user-icon.png">
+                        <span class="comments__author-name"><?= get_user_meta( $comment->user_id, 'nickname', true ) ?></span>
+                        <!--                        <span class="comments__time">19.02 в 12:30</span>-->
+                        <span class="comments__time"><?= get_comment_date('d.m')?> в <?= get_comment_date('G.i')?></span>
+                        <img class="comments__bookmark" src="<?= get_template_directory_uri(); ?>/dist/img/bookmark.png">
+                    </div>
+                    <div class="flex-sb-aic">
+                        <p class="comments_comment"><?= get_comment_text() ?></p>
+                    </div>
+                </div>
+                <!--<li <?php /*comment_class('comment'); */?> id="li-comment-<?php /*comment_ID() */?>">
+                    <div class="comment-wrap" id="comment-<?php /*comment_ID(); */?>">
+                        <div class="user-img">
+                            <?php /*echo get_avatar($comment->comment_author_email, $args['avatar_size']); */?>
+                        </div>
+
+                        <?php /*comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) */?>
+
+                        <?php /*printf(__('<cite class="fn name">%s</cite>'), get_comment_author_link()) */?>
+
+                        <div class="date"><?php /*printf(__('%1$s'), get_comment_date('j F Y'), '') */?></div>
+
+                        <?php /*comment_text() */?>
+                        <?php /*//edit_comment_link(__('Редактировать'), ' ');
+                        */?>
+
+                        <?php /*if ($comment->comment_approved == '0') : */?>
+                            <div
+                                class="comment-awaiting-verification"><?php /*_e('Your comment is awaiting moderation.') */?></div>
+                            <br/>
+                        <?php /*endif; */?>
+                    </div>
+                </li>-->
+
+                <?php
+                break;
+            case 'pingback'  :
+            case 'trackback' :
+                ?>
+                <li class="post pingback">
+                <?php comment_author_link(); ?>
+                <?php edit_comment_link(__('Редактировать'), ' '); ?>
+                <?php
+                break;
+        endswitch;
+    }
+}
