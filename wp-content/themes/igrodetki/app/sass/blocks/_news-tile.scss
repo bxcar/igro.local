@@ -2,6 +2,12 @@
   width: 372px;
   text-decoration: none;
 
+  &--category {
+    margin: {
+      bottom: 35px;
+    }
+  }
+
   @media (max-width: $desktop-width) {
     margin: {
       bottom: 40px;
