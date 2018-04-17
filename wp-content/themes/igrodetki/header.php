@@ -17,7 +17,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?php the_title();?> - IgroDetki</title>
+    <title><?php the_title(); ?> - IgroDetki</title>
     <?php wp_head(); ?>
 </head>
 <body>
@@ -38,9 +38,15 @@
         );
         ?>
         <a class="nofill-button nofill-button--header" href="#"><?php the_field('header_button_text', 'option'); ?></a>
-        <form class="search-form" action="#" method="post">
+        <button id="search-form-submit-unreal" class="search-form__submit">
+            <img class="search-form__submit-img"
+                 src="<?= get_template_directory_uri(); ?>/dist/img/search-button.png">
+        </button>
+        <form id="header-search-form" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+            <input class="nofill-button nofill-button--search" name="s" id="s" type="text" placeholder="Поиск">
             <button type="submit" class="search-form__submit">
-                <img class="search-form__submit-img" src="<?= get_template_directory_uri(); ?>/dist/img/search-button.png">
+                <img class="search-form__submit-img"
+                     src="<?= get_template_directory_uri(); ?>/dist/img/search-button.png">
             </button>
         </form>
     </div>

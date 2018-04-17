@@ -56,6 +56,23 @@ body {
     }
   }
 
+  &--search {
+    outline: none;
+    height: 10px;
+
+    @media (max-width: $desktop-width) {
+      padding-right: 5px;
+      padding-left: 20px;
+      margin-left: 25px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding-right: 25px;
+      padding-left: 25px;
+      margin-left: 0;
+    }
+  }
+
   &--comment {
     display: flex;
     justify-content: center;

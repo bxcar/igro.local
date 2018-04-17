@@ -2,14 +2,34 @@
   margin: {
     top: 2px;
   }
+  display: none;
+
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width) {
+    margin: {
+      top: 20px;
+    }
+    flex-direction: column;
+  }
 }
 
 .search-form__submit {
   background: none;
   border: none;
   outline: none;
+  margin: {
+    left: 10px;
+  }
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: {
+      top: 15px;
+    }
   }
 }

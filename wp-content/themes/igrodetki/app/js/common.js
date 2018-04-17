@@ -21,4 +21,10 @@ $(document).ready(function () {
     });
 
     $('.wpcf7 input[type="submit"]').replaceWith('<button class="subscribe-news__submit" type="submit"><span class="subscribe-news__submit-text1">Подписаться</span><span>+1258</span></button>');
+
+    $( "#search-form-submit-unreal" ).click(function() {
+        $(".nofill-button--header").css("display", "none");
+        $(this).css("display", "none");
+        $("#header-search-form").css("display", "flex");
+    });
 });
