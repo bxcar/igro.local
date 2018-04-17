@@ -127,7 +127,7 @@ function igrodetki_scripts() {
 	wp_enqueue_style( 'main.css', get_template_directory_uri() . '/dist/css/main.css');
 
     wp_enqueue_script( 'libs.min.js', get_template_directory_uri() . '/dist/js/libs.min.js', array(), '', true);
-    wp_enqueue_script( 'common.js', get_template_directory_uri() . '/dist/js/common.js', array(), '', true);
+    wp_enqueue_script( 'common.js', get_template_directory_uri() . '/app/js/common.js', array(), '', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -311,3 +311,9 @@ function wpb_move_comment_field_to_bottom( $fields ) {
 }
 
 add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );
+
+add_filter('wpcf7_form_elements', function($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+    return $content;
+});

@@ -130,13 +130,7 @@ get_header();
         <div class="dots-line"></div>
         <div class="subscribe-news">
             <span class="subscribe-news__title">Подпишитесь на наши новости</span>
-            <form class="subscribe-news__form" action="#" method="post">
-                <div class="flex-sb-aic subscribe-news__form-items-wrap">
-                    <input class="subscribe-news__email" type="email" name="email" placeholder="Ваш email">
-                    <button class="subscribe-news__submit" type="submit"><span class="subscribe-news__submit-text1">Подписаться</span><span>+1258</span>
-                    </button>
-                </div>
-            </form>
+            <?php echo do_shortcode('[contact-form-7 id="117" html_class=""]'); ?>
         </div>
         <div class="dots-line"></div>
         <h2 class="section-title section-title--games"><img class="section-title__img" src="img/literature-icon.png">Литература
@@ -227,13 +221,7 @@ get_header();
         <div class="dots-line"></div>
         <div class="subscribe-news">
             <span class="subscribe-news__title">Подпишитесь на наши новости</span>
-            <form class="subscribe-news__form" action="#" method="post">
-                <div class="flex-sb-aic subscribe-news__form-items-wrap">
-                    <input class="subscribe-news__email" type="email" name="email" placeholder="Ваш email">
-                    <button class="subscribe-news__submit" type="submit"><span class="subscribe-news__submit-text1">Подписаться</span><span>+1258</span>
-                    </button>
-                </div>
-            </form>
+            <?php echo do_shortcode('[contact-form-7 id="118" html_class=""]'); ?>
         </div>
         <div class="dots-line dots-line--main-page-prefooter"></div>
     </main>

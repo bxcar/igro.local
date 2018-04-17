@@ -237,4 +237,38 @@ body {
   line-height: 40px;
   outline: 0;
 }
-//custom styles for wp comments//
+//custom styles for wp comments (no bem)//
+
+.wpcf7 {
+  display: inline-block;
+  width: 586px;
+  height: 100%;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+    margin: {
+      top: 20px !important;
+      bottom: 20px !important;
+    }
+  }
+}
+
+.wpcf7 .ajax-loader {
+  display: none !important;
+}
+
+.wpcf7-form {
+  height: 100%;
+}
+
+.wpcf7-response-output {
+  position: absolute;
+  @media (max-width: $desktop-width) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 260px;
+  }
+}

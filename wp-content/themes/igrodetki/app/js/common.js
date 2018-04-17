@@ -19,4 +19,6 @@ $(document).ready(function () {
         $("#owl-slider").trigger('to.owl.carousel', [$(this).index(), 300]);
         $("#owl-slider-v2").trigger('to.owl.carousel', [$(this).index(), 300]);
     });
+
+    $('.wpcf7 input[type="submit"]').replaceWith('<button class="subscribe-news__submit" type="submit"><span class="subscribe-news__submit-text1">Подписаться</span><span>+1258</span></button>');
 });
