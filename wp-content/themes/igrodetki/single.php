@@ -37,44 +37,6 @@ while ( have_posts() ) : the_post();
                 <div class="article__content">
                     <?php the_content(); ?>
                 </div>
-                <!--<a class="nofill-button nofill-button--comment">Оставить комментарий</a>
-                <span class="article__comments-title"><span class="square"></span>Комментарии 3</span>
-                <div class="grey-line"></div>
-                <div class="article__comments comments">
-                    <div class="comments__item">
-                        <div class="flex-sb-aic comments__item-top">
-                            <img class="comments__author-icon" src="img/user-icon.png">
-                            <span class="comments__author-name">Имя пользователя</span>
-                            <span class="comments__time">19.02 в 12:30</span>
-                            <img class="comments__bookmark" src="img/bookmark.png">
-                        </div>
-                        <div class="flex-sb-aic">
-                            <p class="comments_comment">Комментарий заказчика на несколько строчек</p>
-                        </div>
-                    </div>
-                    <div class="comments__item">
-                        <div class="flex-sb-aic comments__item-top">
-                            <img class="comments__author-icon" src="img/user-icon.png">
-                            <span class="comments__author-name">Имя пользователя</span>
-                            <span class="comments__time">19.02 в 12:30</span>
-                            <img class="comments__bookmark" src="img/bookmark.png">
-                        </div>
-                        <div class="flex-sb-aic">
-                            <p class="comments_comment">Комментарий заказчика на несколько строчек</p>
-                        </div>
-                    </div>
-                    <div class="comments__item">
-                        <div class="flex-sb-aic comments__item-top">
-                            <img class="comments__author-icon" src="img/user-icon.png">
-                            <span class="comments__author-name">Имя пользователя</span>
-                            <span class="comments__time">19.02 в 12:30</span>
-                            <img class="comments__bookmark" src="img/bookmark.png">
-                        </div>
-                        <div class="flex-sb-aic">
-                            <p class="comments_comment">Комментарий заказчика на несколько строчек</p>
-                        </div>
-                    </div>
-                </div>-->
                 <?php comments_template('/comments.php', true); ?>
             </div>
             <?php get_sidebar(); ?>

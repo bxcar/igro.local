@@ -256,7 +256,7 @@ function mytheme_comment($comment, $args, $depth)
                 <div class="comments__item">
                     <div class="flex-sb-aic comments__item-top">
                         <img class="comments__author-icon" src="<?= get_template_directory_uri(); ?>/dist/img/user-icon.png">
-                        <span class="comments__author-name"><?= get_user_meta( $comment->user_id, 'nickname', true ) ?></span>
+                        <span class="comments__author-name"><?= get_comment_author();//get_user_meta( $comment->user_id, 'nickname', true ) ?></span>
                         <!--                        <span class="comments__time">19.02 в 12:30</span>-->
                         <span class="comments__time"><?= get_comment_date('d.m')?> в <?= get_comment_date('G.i')?></span>
                         <img class="comments__bookmark" src="<?= get_template_directory_uri(); ?>/dist/img/bookmark.png">
@@ -302,3 +302,12 @@ function mytheme_comment($comment, $args, $depth)
         endswitch;
     }
 }
+
+function wpb_move_comment_field_to_bottom( $fields ) {
+    $comment_field = $fields['comment'];
+    unset( $fields['comment'] );
+    $fields['comment'] = $comment_field;
+    return $fields;
+}
+
+add_filter( 'comment_form_fields', 'wpb_move_comment_field_to_bottom' );

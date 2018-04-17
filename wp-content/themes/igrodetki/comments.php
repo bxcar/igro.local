@@ -19,7 +19,7 @@ if (post_password_required()) {
     return;
 }
 ?>
-<a class="nofill-button nofill-button--comment">Оставить комментарий</a>
+<!--<a class="nofill-button nofill-button--comment">Оставить комментарий</a>-->
 
 <?php
 // You can start editing here -- including this comment!
@@ -28,8 +28,7 @@ if (have_comments()) :
     $fields = array(
         'author' => '
         <input required placeholder="Имя" id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30"' . $aria_req . ' />',
-        'email' => '<input required placeholder="Email" id="email" name="email" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div></div>',
-        'comment_field' => '<p class="comment-form-comment"><textarea placeholder="Комментарий..." id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
+        'email' => '<input required placeholder="Email" id="email" name="email" type="email" value="' . esc_attr($commenter['comment_author_email']) . '" size="30"' . $aria_req . ' /></div></div>'
     );
 
     $comments_args = array(
@@ -39,6 +38,7 @@ if (have_comments()) :
         <div class="form-wrap">',
         'title_reply' => '',
         'comment_notes_after' => '',
+        'comment_field' => '<p class="comment-form-comment"><textarea placeholder="Комментарий..." id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>'
     );
 
 
